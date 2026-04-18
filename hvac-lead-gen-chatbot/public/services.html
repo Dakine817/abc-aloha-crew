@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | ABC Aloha Crew HVAC</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); min-height: 100vh; padding: 20px; color: #333; }
+    .container { max-width: 1200px; margin: 0 auto; background: rgba(255,255,255,0.95); border-radius: 20px; padding: 40px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+    header { text-align: center; margin-bottom: 40px; }
+    h1 { color: #1a2a6c; font-size: 2.5rem; margin-bottom: 10px; }
+    .subtitle { color: #666; font-size: 1.2rem; }
+    .emergency-banner { background: linear-gradient(135deg, #dc3545, #c82333); color: white; padding: 25px; text-align: center; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 5px 20px rgba(220,53,69,0.3); animation: pulse 2s infinite; }
+    .emergency-banner h2 { font-size: 1.8rem; margin-bottom: 10px; }
+    .emergency-banner p { font-size: 1.1rem; opacity: 0.9; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin: 30px 0; }
+    .service-card { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 30px; border-radius: 20px; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; position: relative; overflow: hidden; }
+    .service-card::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%); animation: shimmer 6s linear infinite; }
+    .service-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(102,126,234,0.4); }
+    .service-icon { font-size: 3rem; margin-bottom: 15px; }
+    .service-card h3 { font-size: 1.5rem; margin-bottom: 10px; }
+    .price { font-size: 2rem; font-weight: bold; margin-bottom: 15px; display: block; }
+    .service-card p { opacity: 0.9; line-height: 1.6; }
+    @keyframes shimmer { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.9; } }
+    .contact-form { background: #f8f9fa; padding: 30px; border-radius: 15px; margin-top: 30px; }
+    .contact-form h2 { color: #1a2a6c; margin-bottom: 20px; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; color: #333; margin-bottom: 8px; font-weight: 600; }
+    .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 15px; border: 2px solid #e9ecef; border-radius: 10px; font-size: 1rem; transition: border-color 0.3s; }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: #667eea; outline: none; }
+    .form-group textarea { min-height: 120px; resize: vertical; }
+    button[type="submit"] { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 18px 40px; border: none; border-radius: 12px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; width: 100%; }
+    button[type="submit"]:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(102,126,234,0.4); }
+    .footer { text-align: center; margin-top: 40px; color: #666; font-size: 0.9rem; }
+    .success-message { display: none; background: #28a745; color: white; padding: 15px; border-radius: 10px; text-align: center; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>❄️ ABC Aloha Crew HVAC</h1>
+      <p class="subtitle">Professional HVAC Services for Hawaii's Finest</p>
+    </header>
+
+    <div class="emergency-banner">
+      <h2>🚨 24/7 Emergency Service Available</h2>
+      <p>AC not working? No heat? We're here for you! <br><strong>Call Now: (808) 555-0123</strong></p>
+    </div>
+
+    <h2 style="text-align:center; color:#1a2a6c; margin-bottom:20px;">Our HVAC Services</h2>
+    
+    <div class="services-grid">
+      <div class="service-card" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        <div class="service-icon">❄️</div>
+        <h3>AC Repair</h3>
+        <span class="price">$199</span>
+        <p>Complete air conditioning diagnosis and repair. Fast response for heat waves!</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🔥</div>
+        <h3>Heating Repair</h3>
+        <span class="price">$199</span>
+        <p>Furnace and heat pump repair services. Stay warm during Hawaii's cool nights.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🔧</div>
+        <h3>Preventative Maintenance</h3>
+        <span class="price">$99</span>
+        <p>Seasonal tune-up and inspection. Avoid expensive repairs with regular maintenance.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🏠</div>
+        <h3>HVAC Installation</h3>
+        <span class="price">Custom Quote</span>
+        <p>New system installation. Energy-efficient systems for Hawaii's climate.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">⚡</div>
+        <h3>Emergency Service</h3>
+        <span class="price">$249</span>
+        <p>24/7 emergency response. We're here when you need us most!</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🌬️</div>
+        <h3>Air Quality Solutions</h3>
+        <span class="price">$149</span>
+        <p>Filter replacement, duct cleaning, and air quality improvements.</p>
+      </div>
+    </div>
+
+    <div class="contact-form" id="contact">
+      <h2>📞 Request a Service</h2>
+      <div class="success-message" id="successMsg">
+        ✅ Thank you! We've received your request and will call you shortly.
+      </div>
+
+      <form id="leadForm" onsubmit="submitLead(event)">
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" required placeholder="John Doe">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" required placeholder="(808) 555-0123" pattern="[0-9\-\(\)\s]{10,}">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="john@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="service">Service Needed *</label>
+          <select id="service" name="service" required>
+            <option value="">-- Select a Service --</option>
+            <option value="AC Repair">AC Repair - $199</option>
+            <option value="Heating Repair">Heating Repair - $199</option>
+            <option value="Preventative Maintenance">Preventative Maintenance - $99</option>
+            <option value="HVAC Installation">HVAC Installation - Custom Quote</option>
+            <option value="Emergency Service">Emergency Service - $249</option>
+            <option value="Air Quality Solutions">Air Quality Solutions - $149</option>
+            <option value="Other">Other Service</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="issue">Describe Your Issue *</label>
+          <textarea id="issue" name="issue" required placeholder="Please describe your HVAC issue or maintenance needs..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="preferredTime">Preferred Contact Time *</label>
+          <input type="text" id="preferredTime" name="preferredTime" required placeholder="e.g., "Anytime", "Evenings only", "Weekends">
+        </div>
+
+        <button type="submit">Send Request</button>
+      </form>
+    </div>
+
+    <div class="footer">
+      <p>© 2026 ABC Aloha Crew LLC | <a href="https://wa.me/18085550123" style="color:#666;">WhatsApp Us</a> | <a href="tel:8085550123" style="color:#666;">Call (808) 555-0123</a></p>
+      <p style="margin-top:10px; color:#999;">Serving all of Oahu | Licensed & Insured | 5-Star Rated</p>
+    </div>
+  </div>
+
+  <script>
+    function submitLead(event) {
+      event.preventDefault();
+      
+      // Simulate form submission
+      const form = document.getElementById('leadForm');
+      const successMsg = document.getElementById('successMsg');
+      
+      // Show loading state
+      const btn = form.querySelector('button');
+      const originalText = btn.textContent;
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      
+      // Simulate API call
+      setTimeout(() => {
+        form.style.display = 'none';
+        successMsg.style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        
+        // Reset form after delay
+        setTimeout(() => {
+          window.location.href = '/';
+        }, 3000);
+      }, 1500);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analytics Demo - HVAC Lead Gen</title>
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; max-width: 1000px; margin: 0 auto; padding: 40px; background: #f8f9fa; }
+    .header { background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d); color: white; padding: 30px; border-radius: 15px; margin-bottom: 30px; }
+    .card { background: white; padding: 25px; border-radius: 15px; margin: 20px 0; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+    .card h2 { color: #1a2a6c; margin-bottom: 15px; }
+    .tracking-id { background: #28a745; color: white; padding: 15px; border-radius: 10px; font-family: monospace; font-size: 1.2rem; margin: 15px 0; }
+    .placeholder-id { background: #6c757d; color: white; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin: 20px 0; }
+    .stat-box { background: #667eea; color: white; padding: 20px; border-radius: 12px; text-align: center; }
+    .stat-number { font-size: 2rem; font-weight: bold; }
+    .stat-label { font-size: 0.9rem; opacity: 0.9; }
+    .chart { height: 200px; background: #f0f2f5; border-radius: 12px; margin: 20px 0; display: flex; align-items: flex-end; padding: 20px; gap: 10px; }
+    .bar { background: #667eea; width: 40px; border-radius: 8px 8px 0 0; transition: height 0.3s; }
+    .bar:nth-child(even) { background: #764ba2; }
+    .code-block { background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0; font-family: monospace; }
+    .code-block pre { margin: 0; white-space: pre-wrap; }
+    .button { background: #667eea; color: white; padding: 15px 30px; border: none; border-radius: 10px; cursor: pointer; font-size: 1rem; margin: 10px 5px; }
+    .button:hover { background: #764ba2; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>📊 Analytics Dashboard Demo</h1>
+    <p>See how tracking works with Google Analytics</p>
+  </div>
+
+  <div class="card">
+    <h2>🔧 Setup Instructions</h2>
+    <p>After deploying to Netlify, add your Google Analytics tracking ID:</p>
+    <div class="tracking-id placeholder-id">
+      <!-- G-YOUR_TRACKING_ID_HERE -->
+    </div>
+    <p><strong>How to add tracking ID:</strong></p>
+    <ol>
+      <li>Go to Google Analytics (analytics.google.com)</li>
+      <li>Create free account</li>
+      <li>Copy your Measurement ID: <code>G-XXXXXXXXXX</code></li>
+      <li>Paste into Netlify deployment</li>
+      <li>Add to <code>index.html</code> in &lt;head&gt; section</li>
+    </ol>
+    <p><strong>Or</strong> just share the site and I'll add tracking via Netlify!</p>
+  </div>
+
+  <div class="card">
+    <h2>📈 What You'll Track</h2>
+    <div class="stats">
+      <div class="stat-box">
+        <div class="stat-number" id="visitors">0</div>
+        <div class="stat-label">Visitors</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" id="leads">0</div>
+        <div class="stat-label">Leads Captured</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" id="chats">0</div>
+        <div class="stat-label">Chat Sessions</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number" id="bookings">0</div>
+        <div class="stat-label">Booking Requests</div>
+      </div>
+    </div>
+    <p>This is a demo. Real tracking starts when you deploy!</p>
+  </div>
+
+  <div class="card">
+    <h2>🎯 Custom Tracking Events</h2>
+    <div class="code-block">
+      <pre>// Track when someone visits:
+gtag('event', 'page_view', {
+  'page_path': '/services',
+  'page_title': 'Our Services | ABC Aloha Crew'
+});
+
+// Track when someone requests service:
+gtag('event', 'form_submit', {
+  'event_category': 'Lead Generation',
+  'event_label': 'HVAC Service Request'
+});
+
+// Track chatbot conversations:
+gtag('event', 'chat_message', {
+  'event_category': 'Chatbot',
+  'event_label': 'User sent message'
+});</pre>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>📱 Real-Time Data</h2>
+    <p>Once tracking is active, you'll see:</p>
+    <ul>
+      <li>✅ Live visitor counts</li>
+      <li>✅ Form submission alerts</li>
+      <li>✅ Service interest tracking</li>
+      <li>✅ Chatbot conversation logs</li>
+      <li>✅ Bounce rate and engagement</li>
+      <li>✅ Geographic location data</li>
+      <li>✅ Device type breakdown</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>🔗 Quick Links</h2>
+    <button class="button" onclick="openGA()">Open Google Analytics</button>
+    <button class="button" onclick="openGA4()">Set Up GA4</button>
+    <button class="button" onclick="generatePlaceholder()">Generate Placeholder ID</button>
+  </div>
+
+  <script>
+    // Demo stats (not real data)
+    const demoStats = {
+      visitors: Math.floor(Math.random() * 500) + 50,
+      leads: Math.floor(Math.random() * 20) + 2,
+      chats: Math.floor(Math.random() * 100) + 10,
+      bookings: Math.floor(Math.random() * 8) + 1
+    };
+
+    // Update demo stats
+    document.getElementById('visitors').textContent = demoStats.visitors;
+    document.getElementById('leads').textContent = demoStats.leads;
+    document.getElementById('chats').textContent = demoStats.chats;
+    document.getElementById('bookings').textContent = demoStats.bookings;
+
+    // Generate placeholder tracking ID
+    function generatePlaceholder() {
+      const placeholder = document.querySelector('.placeholder-id');
+      const newId = 'G-' + Math.random().toString(36).substr(2, 9).toUpperCase();
+      placeholder.textContent = newId;
+      console.log('This is just a demo ID. Replace with your real tracking ID!');
+    }
+
+    function openGA() {
+      window.open('https://analytics.google.com', '_blank');
+    }
+
+    function openGA4() {
+      window.open('https://analytics.google.com/analytics/edit', '_blank');
+    }
+  </script>
+</body>
+</html>
