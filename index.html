@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ABC Aloha Crew - AI with Aloha Spirit. Intelligent solutions built with care, creativity, and passion.">
+    <meta name="theme-color" content="#0f172a">
+    <title>ABC Aloha Crew - AI with Aloha Spirit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-circle">ABC</div>
+                <div class="logo-text">
+                    <span class="logo-main">ABC</span>
+                    <span class="logo-sub">Aloha Crew</span>
+                </div>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <button class="nav-item" onclick="scrollToSection('solutions')">Solutions</button>
+                <button class="nav-item" onclick="scrollToSection('pricing')">Pricing</button>
+                <button class="nav-item" onclick="scrollToSection('about')">About</button>
+                <button class="nav-item" onclick="scrollToSection('contact')">Contact</button>
+            </div>
+            <button class="nav-cta">Join Us</button>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="gradient-blob blob-1"></div>
+        <div class="gradient-blob blob-2"></div>
+
+        <div class="hero-content">
+            <div class="hero-badge">🌺 Welcome to the Future of AI</div>
+            <h1 class="hero-title">AI with Aloha Spirit</h1>
+            <p class="hero-subtitle">Experience intelligent solutions built with care, creativity, and passion. ABC Aloha Crew brings human-centered AI to your business.</p>
+
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('pricing')">
+                    Get Started <span class="arrow">→</span>
+                </button>
+                <button class="btn btn-secondary">See Demo</button>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <p class="stat-number">500+</p>
+                    <p class="stat-label">Happy Clients</p>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-number">99.99%</p>
+                    <p class="stat-label">System Uptime</p>
+                </div>
+                <div class="stat-card">
+                    <p class="stat-number">50M+</p>
+                    <p class="stat-label">Requests Daily</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="solutions">
+        <div class="container">
+            <h2 class="section-title">Why ABC Aloha Crew</h2>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Intelligent Design</h3>
+                    <p>AI-powered solutions crafted with aloha spirit</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Blazing Performance</h3>
+                    <p>Enterprise-grade speed and reliability</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌿</div>
+                    <h3>Sustainable Growth</h3>
+                    <p>Eco-conscious AI innovation for tomorrow</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container benefits-container">
+            <div class="benefits-content">
+                <h2>Complete AI Solutions</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">✓ Real-time analytics</div>
+                    <div class="benefit-item">✓ Intuitive interface</div>
+                    <div class="benefit-item">✓ Enterprise security</div>
+                    <div class="benefit-item">✓ Global scalability</div>
+                    <div class="benefit-item">✓ Custom solutions</div>
+                    <div class="benefit-item">✓ Dedicated support</div>
+                </div>
+            </div>
+            <div class="benefits-visual">
+                <div class="visual-box">
+                    <div class="visual-icon">🌴</div>
+                    <p>Smart Solutions,<br>Island Spirit</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Loved by Innovators</h2>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"ABC Aloha Crew transformed how we handle AI. Best decision ever."</p>
+                    <p class="testimonial-name">Sarah Chen</p>
+                    <p class="testimonial-role">CEO at TechFlow</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"The team brought real aloha spirit to our project. Exceptional support."</p>
+                    <p class="testimonial-name">Marcus Williams</p>
+                    <p class="testimonial-role">CTO at DataSync</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-quote">"From day one, they understood our vision and delivered beyond expectations."</p>
+                    <p class="testimonial-name">Elena Rodriguez</p>
+                    <p class="testimonial-role">Founder at CloudVenture</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Transparent Pricing</h2>
+
+            <div class="pricing-grid">
+                <!-- Wave Rider Plan -->
+                <div class="pricing-card">
+                    <h3 class="pricing-name">Wave Rider</h3>
+                    <div class="pricing-price">
+                        <span class="price-currency">$</span>
+                        <span class="price-amount">49</span>
+                        <span class="price-period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Up to 500K requests</li>
+                        <li>✓ Email support</li>
+                        <li>✓ Standard API</li>
+                        <li>✓ Community access</li>
+                    </ul>
+                    <button class="btn btn-secondary btn-full">Get Started</button>
+                </div>
+
+                <!-- Aloha Pro Plan -->
+                <div class="pricing-card pricing-card-featured">
+                    <div class="featured-badge">Most Popular</div>
+                    <h3 class="pricing-name">Aloha Pro</h3>
+                    <div class="pricing-price">
+                        <span class="price-currency">$</span>
+                        <span class="price-amount">149</span>
+                        <span class="price-period">/month</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Unlimited requests</li>
+                        <li>✓ 24/7 support</li>
+                        <li>✓ Custom models</li>
+                        <li>✓ Advanced analytics</li>
+                        <li>✓ Priority response</li>
+                    </ul>
+                    <button class="btn btn-primary btn-full">Choose Plan</button>
+                </div>
+
+                <!-- Chief Ohana Plan -->
+                <div class="pricing-card">
+                    <h3 class="pricing-name">Chief Ohana</h3>
+                    <div class="pricing-price">
+                        <span class="price-amount">Custom</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ White-label</li>
+                        <li>✓ Dedicated team</li>
+                        <li>✓ SLA guarantee</li>
+                        <li>✓ Custom deployment</li>
+                    </ul>
+                    <button class="btn btn-secondary btn-full">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready for AI with Aloha?</h2>
+            <p>Join hundreds of companies revolutionizing their operations with human-centered AI</p>
+            <button class="btn btn-primary btn-large">
+                Start Your Free Trial <span class="arrow">→</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#solutions">Solutions</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#">API Docs</a></li>
+                        <li><a href="#">Updates</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Ohana</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Docs</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ABC Aloha Crew. All rights reserved. 🌺</p>
+            <div class="social-links">
+                <a href="#">Twitter</a>
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Discord</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
